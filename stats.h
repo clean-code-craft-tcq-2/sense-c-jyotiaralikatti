@@ -7,7 +7,7 @@ struct Stats
 	float max;
 };
 
-#define NAN 0;// remove this
+//#define NAN 0;// remove this
 const float maxThreshold = 10.2 ;
 struct Stats compute_statistics(const float* numberset, int setlength);
 
