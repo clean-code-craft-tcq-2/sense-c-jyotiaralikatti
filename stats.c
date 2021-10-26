@@ -8,9 +8,9 @@ int emailAlertCallCount = 0 ;
 int ledAlertCallCount = 0;
 alerter_funcptr alerters[] = {emailAlerter, ledAlerter} ;
 
-int main()
+/* int main()
 {
-    /* Enter different values of array elements or use scanf for the same*/
+    // Enter different values of array elements or use scanf for the same
     float numberset[] =  {99.8, 34.2, 4.5};//= {1.5, 8.9};// pointer to constant flaot
     
     int i,setlength = sizeof(numberset) / sizeof(numberset[0]);
@@ -30,7 +30,7 @@ int main()
     
     //Printing check and alert status
     if (emailAlertCallCount && ledAlertCallCount)
-    {/* max > Threshhold*/
+    {// max > Threshhold
         printf("\n ALERT !!..emailAlertCallCount: %d \t ledAlertCallCount: %d", emailAlertCallCount,ledAlertCallCount);
         emailAlertCallCount = 0;
         ledAlertCallCount = 0;
@@ -39,7 +39,7 @@ int main()
     printf("\n emailAlertCallCount: %d \t ledAlertCallCount: %d", emailAlertCallCount,ledAlertCallCount );
     
     
-}
+} end of main()*/
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
