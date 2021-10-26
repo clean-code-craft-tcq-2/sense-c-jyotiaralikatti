@@ -100,13 +100,16 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
           sum += numberset[i];
         }
         s.average =(float)(sum/setlength);
+        if (s.average == 0)
+        {
+            s.max = NAN;
+            s.min = NAN;
+            s.average = NAN;
+        }
     }
     else
     {
-        s.max = NAN;
-        s.min = NAN;
-        s.average = NAN;
+     /* do nothing*/
     }
-
     return s;
 }
