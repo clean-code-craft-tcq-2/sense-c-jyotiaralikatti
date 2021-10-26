@@ -8,39 +8,6 @@ int emailAlertCallCount = 0 ;
 int ledAlertCallCount = 0;
 alerter_funcptr alerters[] = {emailAlerter, ledAlerter} ;
 
-/* int main()
-{
-    // Enter different values of array elements or use scanf for the same
-    float numberset[] =  {99.8, 34.2, 4.5};//= {1.5, 8.9};// pointer to constant flaot
-    
-    int i,setlength = sizeof(numberset) / sizeof(numberset[0]);
-    
-    struct Stats computedStats = compute_statistics(numberset, setlength);
-    
-    check_and_alert(maxThreshold, alerters, computedStats);
-    
-    //Printing elements of computedStats
-    printf("\n Elements of numberset ");
-    for (i=0; i<setlength; i++)
-    {
-    printf("\n %f \t",numberset[i]);
-    }
-    printf("\n Elements of computedStats ");
-    printf("\n %f \t %f \t %f \t ",computedStats.max,computedStats.min,computedStats.average);
-    
-    //Printing check and alert status
-    if (emailAlertCallCount && ledAlertCallCount)
-    {// max > Threshhold
-        printf("\n ALERT !!..emailAlertCallCount: %d \t ledAlertCallCount: %d", emailAlertCallCount,ledAlertCallCount);
-        emailAlertCallCount = 0;
-        ledAlertCallCount = 0;
-    }
-    else
-    printf("\n emailAlertCallCount: %d \t ledAlertCallCount: %d", emailAlertCallCount,ledAlertCallCount );
-    
-    
-} end of main()*/
-
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
   
@@ -48,12 +15,12 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
   {
       /* Send alerts */
      (alerters[0])();//emailAlerter();
-      (alerters[1])();//ledAlerter();
+     (alerters[1])();//ledAlerter();
   }
   else
-  { /* Do nothing*/
+  {   /* Do nothing*/
+      
   }
-
 }
 
 void emailAlerter()
