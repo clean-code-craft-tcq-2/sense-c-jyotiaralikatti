@@ -1,4 +1,5 @@
 #include "stats.h"
+#include "alerter.h"
 #include <stdio.h>
 #include <math.h>
 
