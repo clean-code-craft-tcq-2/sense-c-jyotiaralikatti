@@ -2,10 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-/* global variables */
-
-int emailAlertCallCount = 0 ;
-int ledAlertCallCount = 0;
+/* global variable */
 alerter_funcptr alerters[] = {emailAlerter, ledAlerter} ;
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
@@ -21,15 +18,6 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
   {   /* Do nothing*/
       
   }
-}
-
-void emailAlerter()
-{
-     emailAlertCallCount = 1;
-}
-void ledAlerter()
-{
-     ledAlertCallCount = 1;
 }
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
